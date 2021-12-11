@@ -1,0 +1,72 @@
+.Covid-container {
+   display: grid;
+   justify-content: center;
+   text-align: center;
+   grid-template-columns: auto auto auto;
+   grid-template-rows: auto;
+   grid-gap: 5em 10em;
+   margin-top: 5vh;
+}
+.Card {
+   height: 200px;
+   width: 200px;
+   border-radius: 20px;
+}
+.Card-main::before {
+   content: "";
+   position: absolute;
+   height: 200px;
+   width: 200px;
+   left: 0;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   background: linear-gradient(
+      to right top,
+      rgb(15, 0, 255) 0%,
+      rgb(9, 9, 255) 35%,
+      rgb(9, 213, 255) 100%
+   );
+   border-radius: 20px;
+}
+.Card-main::after {
+   content: "";
+   position: absolute;
+   height: 200px;
+   width: 200px;
+   left: 0;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   clip-path: polygon(0 0, 100% 0, 100% 100%, 56% 76%, 41% 28%);
+   background: linear-gradient(
+      to left bottom,
+      rgb(34, 193, 195) 0%,
+      rgb(57, 4, 244) 100%
+   );
+   opacity: 0.5;
+   border-radius: 20px;
+}
+
+.Card-main {
+   position: relative;
+   height: 200px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+.Card-inner {
+   font-size: 1.5rem;
+   color: #a0d4ee;
+   z-index: 5;
+}
+.Card-inner span {
+   font-size: 0.6em;
+   z-index: 5;
+}
+.Card-name {
+   font-size: 2em;
+   letter-spacing: 2px;
+   z-index: 5;
+   color: #a0d4ee;
+}
